@@ -3,15 +3,16 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
+import Loader from '../components/Loader'
+import toast from 'react-hot-toast'
+
+
 export default function Home() {
   return (
     <div>
-      <Link href={{
-        pathname: '/[username]',
-        query: { username: 'mohanad kandil' }
-      }}>
-        <a>Kandil profile</a>
-      </Link>
+      <button onClick={() => toast.success('hello toast!!!')}>
+        Click here
+      </button>
     </div>
   )
 }
